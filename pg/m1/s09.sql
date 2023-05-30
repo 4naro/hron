@@ -1,5 +1,4 @@
 -- examples on order by
-
 select first_name, last_name, salary 
 from employee
 order by last_name, first_name;
@@ -30,6 +29,9 @@ order by hired asc
 limit 5;
 
 -- column alias in order by 
+-- con l'operatore e lo spazio, invece che comparire 
+-- tre colonne come nella riga 24, ne escono due di cui una 
+-- si chiama name e in più tra i due dati ci sono due spazzi
 select first_name || ' ' || last_name as name, hired
 from employee
 where first_name like 'A%'
