@@ -19,3 +19,7 @@ where salary < 3000 and employee_id > 160;
 select employee_id, first_name, last_name, department_id
 from employee
 where salary < 2200 or last_name = 'King';
+
+select first_name, last_name, salary
+from employee
+where salary > 2800 AND salary < 3100;

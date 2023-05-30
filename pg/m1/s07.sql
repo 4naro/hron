@@ -36,6 +36,8 @@ from region
 where region_id <= 3;
 
 -- simple pattern matching (case sensitive)
+-- il numero degli underscore equivale al numero dei caratteri
+-- il % è un carattere jolly per non definire il numero di caratteri
 select first_name, last_name
 from employee
 where last_name like '_ull%';
@@ -46,6 +48,7 @@ from employee
 where last_name ilike 'b%';
 
 -- like is standard SQL, ilike is a PG extension
+-- ilike è per cercare parti non per forza ad inizio o fine
 select first_name, last_name
 from employee
 where last_name like 'B%';
@@ -66,7 +69,7 @@ select last_name
 from employee
 where last_name ilike 'sul%';
 
--- interval check by BETWEEN
+-- interval check by BETWEEN oppure con >= <= è uguale
 select *
 from region
 where region_id between 1 and 3;
@@ -120,12 +123,12 @@ select *
 from employee
 where commission in (0.10, 0.15);
 
--- this does not select anything!
+-- this does not select anything! non usarla perchè non funziona
 select *
 from employee
 where commission in (null);
 
--- "is null" is the only way to check it
+-- "is null" is the only way to check it!!!!!!!!!!!!!!!!!!!
 select *
 from employee
 where commission is null;
