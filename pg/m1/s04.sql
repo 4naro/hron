@@ -10,11 +10,13 @@ from region
 where region_id = 1;
 
 -- select a full single column
-select manager_id
+select *
+--select manager_id
 from employee;
 
 -- select only distinct values in a column
-select distinct manager_id
+-- select distinct manager_id
+select manager_id
 from employee;
 
 -- using column name alias
