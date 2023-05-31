@@ -33,3 +33,13 @@ select first_name, last_name, phone, hired, salary, department_id
 from employee
 where (salary < 4000 or salary > 15000) AND department_id in (5, 8);
 
+-- come si scrive la stessa query con il NOT (aggiungi AND non OR)
+select first_name, last_name, phone, hired, salary, department_id
+from employee
+where not (salary >= 4000 AND salary <= 15000) AND department_id in (5, 8);
+-- OR esterni / AND esterni
+
+-- con between / AND - puoi anche non inserire le parentesi
+select first_name, last_name, phone, hired, salary, department_id
+from employee
+where not (salary between 4000 AND 15000) AND department_id in (5, 8);
